@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Home, FolderOpen, Wrench, User, Mail, Calendar } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navigation = [
-    { name: 'Inicio', href: '#inicio' },
-    { name: 'Proyectos', href: '#proyectos' },
-    { name: 'Servicios', href: '#servicios' },
-    { name: 'Sobre mí', href: '#sobre-mi' },
-    { name: 'Contacto', href: '#contacto' },
+    { name: 'Inicio', href: '#inicio', icon: <Home size={16} /> },
+    { name: 'Proyectos', href: '#proyectos', icon: <FolderOpen size={16} /> },
+    { name: 'Servicios', href: '#servicios', icon: <Wrench size={16} /> },
+    { name: 'Sobre mí', href: '#sobre-mi', icon: <User size={16} /> },
+    { name: 'Contacto', href: '#contacto', icon: <Mail size={16} /> },
   ]
 
   return (
@@ -27,7 +27,10 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             className="flex-shrink-0"
           >
-            <a href="#inicio" className="text-2xl font-bold text-primary">
+            <a href="#inicio" className="flex items-center gap-2 text-2xl font-bold text-primary">
+              <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                <Home size={18} className="text-white" />
+              </div>
               Estudio Arquitectura
             </a>
           </motion.div>
@@ -39,8 +42,9 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 whileHover={{ scale: 1.05 }}
-                className="text-text hover:text-accent transition-colors duration-300 font-medium"
+                className="flex items-center gap-2 text-text hover:text-accent transition-colors duration-300 font-medium"
               >
+                {item.icon}
                 {item.name}
               </motion.a>
             ))}
@@ -52,8 +56,9 @@ const Header = () => {
               href="#contacto"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="btn-primary"
+              className="btn-primary flex items-center gap-2"
             >
+              <Calendar size={16} />
               Agendar consulta
             </motion.a>
           </div>
@@ -87,8 +92,9 @@ const Header = () => {
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
                     whileHover={{ x: 10 }}
-                    className="block text-text hover:text-accent transition-colors duration-300 font-medium text-lg"
+                    className="flex items-center gap-3 text-text hover:text-accent transition-colors duration-300 font-medium text-lg"
                   >
+                    {item.icon}
                     {item.name}
                   </motion.a>
                 ))}
@@ -97,8 +103,9 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-block btn-primary mt-4"
+                  className="inline-flex items-center gap-2 btn-primary mt-4"
                 >
+                  <Calendar size={16} />
                   Agendar consulta
                 </motion.a>
               </div>

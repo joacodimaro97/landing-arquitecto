@@ -1,6 +1,9 @@
 📐 Landing Page de Arquitectura e Interiorismo
 Landing page moderna y minimalista desarrollada con React + Vite + Tailwind CSS, diseñada para estudios de arquitectura e interiorismo que buscan transmitir elegancia, profesionalismo y creatividad.
 
+URL al proyecto: 
+https://landing-arquitecto-sigma.vercel.app/
+
 ✨ Características principales:
 
 🏛️ Hero impactante con imagen de proyectos.
