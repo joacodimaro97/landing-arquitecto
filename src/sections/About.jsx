@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Award, Users, Calendar, CheckCircle } from 'lucide-react'
+import { Award, Users, Calendar, CheckCircle } from 'lucide-reackht'
 
 const About = () => {
   const stats = [
@@ -47,13 +47,13 @@ const About = () => {
           {/* Contenido */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            whileInViw={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="space-y-8"
           >
             <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6">
+              <h2 className=ext-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6">
                 Sobre Mí
               </h2>
               <p className="text-lg text-text leading-relaxed mb-6">
